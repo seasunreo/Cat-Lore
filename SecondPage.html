@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Breeds | Cat Lore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="indexes.html"><img src="pictures/Cat.png" alt="" aria-hidden="true"> CAT LORE</a>
+        <a class="back-link" href="indexes.html">Back to home</a>
+    </header>
+
+    <main class="explorer">
+        <section class="intro" aria-labelledby="explore-title">
+            <p class="eyebrow">The breed index</p>
+            <h1 id="explore-title">Find your<br><em>feline match.</em></h1>
+            <p>Search by breed name or choose a card to uncover a quick piece of cat lore.</p>
+        </section>
+
+        <section class="search-panel" aria-label="Breed search">
+            <label for="breed-input">Search breeds</label>
+            <div class="search-row">
+                <input type="search" id="breed-input" placeholder="Try “Maine Coon”" autocomplete="off">
+                <button id="search-button" type="button">Search API</button>
+                <button id="clear-button" type="button" aria-label="Clear search">Clear</button>
+            </div>
+            <p id="result-count" class="result-count" aria-live="polite"></p>
+            <p id="api-status" class="api-status" aria-live="polite">Local index ready. Add an API key to fetch live details.</p>
+        </section>
+
+        <details class="api-settings">
+            <summary>Connect Cat API Ninjas</summary>
+            <div class="api-settings-content">
+                <label for="api-key">API key</label>
+                <input type="password" id="api-key" placeholder="Paste your API Ninjas key" autocomplete="off">
+                <button id="save-key-button" type="button">Save for this session</button>
+            </div>
+        </details>
+
+        <section id="breed-grid" class="breed-grid" aria-live="polite"></section>
+    </main>
+
+    <footer><span>Cat Lore / Breed index</span><a href="indexes.html">Return home</a></footer>
+    <script src="function.js"></script>
+</body>
+</html>
